@@ -7,7 +7,6 @@ import { HomePage } from '../pages/home/home';
 import { ListPage } from '../pages/list/list';
 import { AngularFireAuth } from 'angularfire2/auth';
 
-
 @Component({
   templateUrl: 'app.html'
 })
@@ -17,7 +16,6 @@ export class MyApp {
   rootPage: any;
 
   pages: Array<{title: string, component: any}>;
-
   constructor(public platform: Platform, public statusBar: StatusBar, 
     public splashScreen: SplashScreen,
     public afAuth: AngularFireAuth) {
@@ -31,6 +29,21 @@ export class MyApp {
         this.rootPage = "HomePage"
       }
     });
+
+    // this.menu = {
+    //   header: {
+    //     background: '#000000',
+    //     picture: '../assets/person.png',
+    //     username: 'Steemia',
+    //     email: 'steemia@steemia.io',
+
+    //   },
+    //   entries: [
+    //     { title: 'Home', leftIcon: 'mdi-home', onClick: () => {  } },
+    //     { title: 'About', leftIcon: 'information-circle', onClick: () => { } },
+    //     { title: 'Login', leftIcon: 'log-in', onClick: () => { } }
+    //   ]
+    // };
 
     
 
@@ -46,7 +59,10 @@ export class MyApp {
     this.platform.ready().then(() => {
       // Okay, so the platform is ready and our plugins are available.
       // Here you can do any higher level native things you might need.
-      this.statusBar.styleDefault();
+      if (this.platform.is('android')) {
+        this.statusBar.backgroundColorByHexString("#00F0F8FF");
+        this.statusBar.styleBlackTranslucent();
+      }
       this.splashScreen.hide();
     });
   }

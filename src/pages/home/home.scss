@@ -1,9 +1,4 @@
 page-home {
-
-    .scroll-content {
-        background-color: color($colors, light-bg , base);  
-    }
-
     
     .toolbar-background {
         background: transparent !important;
@@ -23,5 +18,91 @@ page-home {
         margin-bottom: 25px !important;
     }
     
+    .fullscreen {
+        height: 100% !important;
+    }
+
+    .midscreen {
+        height: 80% !important;
+    }
+
+    .bottom-content {
+        height: 20% !important;
+        bottom: 0 !important;
+        background-color: white !important;
+    }
+
+    ul {
+        padding: 0px;
+       
+        &.rating li {
+          padding: 5px 3px !important;
+          background: none;
+          color: #ffb400;
+       
+          ion-icon {
+            font-size: 20px;
+          }
+        }
+      }
+
+      .scroll-zoom-wrapper {
+        white-space: nowrap;
+    }
+
+    ion-card {
+        width: 350px !important;
+        display: inline-block;
+    }
+
+    ion-scroll {
+        min-height: 160px; 
+        height: 241px;
+
+            .scroll-content {
+            padding: 0px !important;
+        }   
+        bottom: 0;
+        position: absolute; 
+        width: 100% !important;
+    }
+
+    ion-card {
+        position: relative;
+        text-align: center;
+      }
+    
+      .card-title {
+        position: absolute;
+        top: 36%;
+        font-size: 1.2em;
+        width: 100%;
+        font-weight: bold;
+        color: #fff;
+      }
+    
+      .card-subtitle {
+        font-size: 1.0em;
+        position: absolute;
+        top: 52%;
+        width: 100%;
+        color: #fff;
+      }
+
+    .custom-card {
+        width: 350px;
+        height: 200px;
+    }
+
+    .shadow-custom {
+        -webkit-box-shadow: 0px 0px 30px rgba(115, 128, 157, 0.3) !important;
+        box-shadow: 0px 0px 30px rgba(115, 128, 157, 0.3) !important;
+    }
+
+    .custom-btn {
+        background-color: transparent;
+        box-shadow: none !important;
+        color: black;
+    }
 
 }

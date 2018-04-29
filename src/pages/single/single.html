@@ -1,0 +1,54 @@
+<!--
+  Generated template for the SinglePage page.
+
+  See http://ionicframework.com/docs/components/#navigation for more info on
+  Ionic pages and navigation.
+-->
+<ion-header no-border>
+  <ion-navbar color="primary">
+    <button ion-button menuToggle>
+      <ion-icon name="mdi-menu"></ion-icon>
+    </button>
+    <ion-title></ion-title>
+    <ion-buttons end>
+      <button ion-button icon-only>
+        <ion-icon name="md-more"></ion-icon>
+      </button>
+    </ion-buttons>
+  </ion-navbar>
+</ion-header>
+
+
+<ion-content>
+
+  <ion-slides pager>
+
+    <ion-slide style="background-image: url('assets/img.jpg')"></ion-slide>
+    <ion-slide style="background-image: url('assets/img2.jpg')"></ion-slide>
+
+  </ion-slides>
+
+  <ion-grid>
+    <ion-row>
+      <ion-col col-12 class="custom-top-first">
+        <h4>{{ title }}</h4>
+      </ion-col>
+      <ion-col col-12 class="custom-top">
+        <rating class="custom-pd" [(ngModel)]="rate" readOnly="true" max="5" emptyStarIconName="star-outline" halfStarIconName="star-half"
+          starIconName="star" nullable="false"></rating>
+      </ion-col>
+
+      <ion-col col-12>
+        <button ion-button outline block>
+          Pre Check-in
+        </button>
+      </ion-col>
+      <ion-col col-12>
+        <button ion-button outline block>
+          Action 1
+        </button>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+
+</ion-content>

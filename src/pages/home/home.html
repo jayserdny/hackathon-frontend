@@ -1,34 +1,40 @@
-<ion-content>
-  <button ion-button (click)="logout()">
-    Logout
-  </button>
-  <ion-header no-border>
-    <ion-navbar color="light-bg">
-      <button ion-button menuToggle>
-        <ion-icon name="menu"></ion-icon>
-      </button>
-      <ion-searchbar class="no-shadow custom-width-94" mode="ios">
-      </ion-searchbar>
-    </ion-navbar>
-  </ion-header> 
+<ion-content fullscreen>
   <ion-header no-lines no-border>
     <ion-grid>
-        <ion-row>
-          <ion-col col-12>
-            <ion-searchbar class="no-shadow custom-width-94" placeholder="Search for hospitals"></ion-searchbar>
-          </ion-col>
-        </ion-row>
-      </ion-grid>
+      <ion-row>
+        <ion-col col-12>
+          <button ion-button menuToggle icon-only color="dark" class="custom-btn">
+            <ion-icon name='menu'></ion-icon>
+          </button>
+        </ion-col>
+        <ion-col col-12>
+          <ion-searchbar class="no-shadow custom-width-94" placeholder="Search for hospitals"></ion-searchbar>
+        </ion-col>
+      </ion-row>
+    </ion-grid>
   </ion-header>
 
+  <ion-scroll scrollX="true" direction="x">
 
-  <div #map id="map" style="height:50%"></div>
+    <ion-card *ngFor="let place of places">
+      <div (click)="openPage('SinglePage', place.name, place.vicinity, place.rating)">
+          <div class="custom-card" style="background:linear-gradient(0deg,rgba(33, 150, 243, 0.8509803921568627),rgba(33, 150, 243, 0.8509803921568627))"></div>
+          <div class="card-title" text-wrap>{{ place.name }}</div>
+          <div class="card-subtitle">{{ place.vicinity }}</div>
+      </div>
+      
+    </ion-card>
 
-  <ion-fab right bottom>
-    <button ion-fab color="dark">
+  </ion-scroll>
+
+  <div #map id="map" [ngClass]="{ 'fullscreen': selected === false, 'midscreen': selected === true }"></div>
+
+
+  <!-- <ion-fab right top>
+    <button ion-fab mini color="dark">
       <ion-icon name="locate"></ion-icon>
     </button>
-  </ion-fab>
+  </ion-fab> -->
 
 
 </ion-content>

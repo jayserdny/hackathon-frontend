@@ -11,13 +11,13 @@ import { AngularFireModule } from 'angularfire2';
 import * as firebase from 'firebase';
 import { AngularFireAuthModule } from 'angularfire2/auth';
 
-
 // native
 import { GoogleMaps } from '@ionic-native/google-maps';
 import { Geolocation } from '@ionic-native/geolocation';
 import { AuthProvider } from '../providers/auth/auth';
 
 import { HttpClientModule } from '@angular/common/http';
+import { WatsonConversationProvider } from '../providers/watson-conversation/watson-conversation';
 
 
 const environment = {
@@ -64,7 +64,8 @@ const environment = {
     StatusBar,
     SplashScreen,
     {provide: ErrorHandler, useClass: IonicErrorHandler},
-    AuthProvider
+    AuthProvider,
+    WatsonConversationProvider
   ]
 })
 export class AppModule {}

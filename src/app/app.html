@@ -1,11 +1,43 @@
 <ion-menu [content]="content">
 
   <ion-content>
-    <ion-list>
-      <button menuClose ion-item *ngFor="let p of pages" (click)="openPage(p)">
-        {{p.title}}
-      </button>
-    </ion-list>
+    <div class="ion-material-sidemenu-container">
+
+      <div class="ion-material-sidemenu-header" style="background:linear-gradient(0deg,rgba(33, 150, 243, 0.8509803921568627),rgba(33, 150, 243, 0.8509803921568627))">
+
+        <img src="assets/person.png" class="picture" />
+        <div class="subtitle">
+          <h1>CUNY</h1>
+          <h2>Hackathon</h2>
+        </div>
+      </div>
+
+      <!-- end cover header -->
+
+      <!-- content -->
+      <ion-list no-lines>
+
+        <button ion-item menuClose detail-none>
+          <ion-icon name="home" item-left></ion-icon>Item 1
+        </button>
+
+        <button ion-item menuClose detail-none>
+          <ion-icon name="heart" item-left></ion-icon>Item 2
+        </button>
+
+        <!-- <div *ngFor="let entry of menu">
+
+          <button ion-item menuClose detail-none>
+
+            <ion-icon [name]="entry.leftIcon" item-left></ion-icon>
+
+            {{ entry.title }}
+          </button>
+        </div> -->
+      </ion-list>
+
+    </div>
+
   </ion-content>
 
 </ion-menu>
