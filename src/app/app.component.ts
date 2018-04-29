@@ -20,15 +20,16 @@ export class MyApp {
     public splashScreen: SplashScreen,
     public afAuth: AngularFireAuth) {
     this.initializeApp();
+    this.rootPage = "HomePage";
 
-    this.afAuth.authState.subscribe(data => {
-      if (data === null || data === undefined) {
-        this.rootPage = 'LoginPage';
-      }
-      else {
-        this.rootPage = "HomePage"
-      }
-    });
+    // this.afAuth.authState.subscribe(data => {
+    //   if (data === null || data === undefined) {
+    //     this.rootPage = 'LoginPage';
+    //   }
+    //   else {
+    //     this.rootPage = "HomePage"
+    //   }
+    // });
 
     // this.menu = {
     //   header: {

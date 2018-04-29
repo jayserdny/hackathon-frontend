@@ -540,20 +540,20 @@ var __metadata = (this && this.__metadata) || function (k, v) {
 
 var MyApp = /** @class */ (function () {
     function MyApp(platform, statusBar, splashScreen, afAuth) {
-        var _this = this;
         this.platform = platform;
         this.statusBar = statusBar;
         this.splashScreen = splashScreen;
         this.afAuth = afAuth;
         this.initializeApp();
-        this.afAuth.authState.subscribe(function (data) {
-            if (data === null || data === undefined) {
-                _this.rootPage = 'LoginPage';
-            }
-            else {
-                _this.rootPage = "HomePage";
-            }
-        });
+        this.rootPage = "HomePage";
+        // this.afAuth.authState.subscribe(data => {
+        //   if (data === null || data === undefined) {
+        //     this.rootPage = 'LoginPage';
+        //   }
+        //   else {
+        //     this.rootPage = "HomePage"
+        //   }
+        // });
         // this.menu = {
         //   header: {
         //     background: '#000000',
@@ -592,16 +592,15 @@ var MyApp = /** @class */ (function () {
     };
     __decorate([
         Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["_9" /* ViewChild */])(__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["h" /* Nav */]),
-        __metadata("design:type", __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["h" /* Nav */])
+        __metadata("design:type", typeof (_a = typeof __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["h" /* Nav */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["h" /* Nav */]) === "function" && _a || Object)
     ], MyApp.prototype, "nav", void 0);
     MyApp = __decorate([
         Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["n" /* Component */])({template:/*ion-inline-start:"/Users/Jayser/Documents/aplicaciones/steemit/hackathon/frontend/src/app/app.html"*/'<ion-menu [content]="content">\n\n  <ion-content>\n    <div class="ion-material-sidemenu-container">\n\n      <div class="ion-material-sidemenu-header" style="background:linear-gradient(0deg,rgba(33, 150, 243, 0.8509803921568627),rgba(33, 150, 243, 0.8509803921568627))">\n\n        <img src="assets/person.png" class="picture" />\n        <div class="subtitle">\n          <h1>CUNY</h1>\n          <h2>Hackathon</h2>\n        </div>\n      </div>\n\n      <!-- end cover header -->\n\n      <!-- content -->\n      <ion-list no-lines>\n\n        <button ion-item menuClose detail-none>\n          <ion-icon name="home" item-left></ion-icon>Item 1\n        </button>\n\n        <button ion-item menuClose detail-none>\n          <ion-icon name="heart" item-left></ion-icon>Item 2\n        </button>\n\n        <!-- <div *ngFor="let entry of menu">\n\n          <button ion-item menuClose detail-none>\n\n            <ion-icon [name]="entry.leftIcon" item-left></ion-icon>\n\n            {{ entry.title }}\n          </button>\n        </div> -->\n      </ion-list>\n\n    </div>\n\n  </ion-content>\n\n</ion-menu>\n\n<!-- Disable swipe-to-go-back because it\'s poor UX to combine STGB with side menus -->\n<ion-nav [root]="rootPage" #content swipeBackEnabled="false"></ion-nav>'/*ion-inline-end:"/Users/Jayser/Documents/aplicaciones/steemit/hackathon/frontend/src/app/app.html"*/
         }),
-        __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["k" /* Platform */], __WEBPACK_IMPORTED_MODULE_2__ionic_native_status_bar__["a" /* StatusBar */],
-            __WEBPACK_IMPORTED_MODULE_3__ionic_native_splash_screen__["a" /* SplashScreen */],
-            __WEBPACK_IMPORTED_MODULE_6_angularfire2_auth__["a" /* AngularFireAuth */]])
+        __metadata("design:paramtypes", [typeof (_b = typeof __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["k" /* Platform */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["k" /* Platform */]) === "function" && _b || Object, typeof (_c = typeof __WEBPACK_IMPORTED_MODULE_2__ionic_native_status_bar__["a" /* StatusBar */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_2__ionic_native_status_bar__["a" /* StatusBar */]) === "function" && _c || Object, typeof (_d = typeof __WEBPACK_IMPORTED_MODULE_3__ionic_native_splash_screen__["a" /* SplashScreen */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_3__ionic_native_splash_screen__["a" /* SplashScreen */]) === "function" && _d || Object, typeof (_e = typeof __WEBPACK_IMPORTED_MODULE_6_angularfire2_auth__["a" /* AngularFireAuth */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_6_angularfire2_auth__["a" /* AngularFireAuth */]) === "function" && _e || Object])
     ], MyApp);
     return MyApp;
+    var _a, _b, _c, _d, _e;
 }());
 
 //# sourceMappingURL=app.component.js.map
