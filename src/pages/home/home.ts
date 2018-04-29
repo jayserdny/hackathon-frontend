@@ -4,7 +4,6 @@ import { GoogleMap, GoogleMaps, GoogleMapOptions, LatLng, GoogleMapsEvent } from
 import { Geolocation, Geoposition } from '@ionic-native/geolocation';
 import { AuthProvider } from '../../providers/auth/auth';
 import { HttpClient } from '@angular/common/http';
-import { WatsonConversationProvider } from '../../providers/watson-conversation/watson-conversation';
 
 declare var google;
 let map: any;
@@ -37,7 +36,6 @@ export class HomePage implements AfterViewInit {
     private googleMaps: GoogleMaps,
     private auth: AuthProvider,
     public http: HttpClient,
-    private watson: WatsonConversationProvider,
     private platform: Platform,
     private geolocation: Geolocation) {
 

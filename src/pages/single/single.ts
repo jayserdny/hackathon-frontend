@@ -29,4 +29,8 @@ export class SinglePage {
     this.coords = this.navParams.get('place');
 
   }
+
+  openChat() {
+    this.navCtrl.push('ChatPage');
+  }
 }

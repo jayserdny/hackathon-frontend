@@ -17,7 +17,7 @@ import { Geolocation } from '@ionic-native/geolocation';
 import { AuthProvider } from '../providers/auth/auth';
 
 import { HttpClientModule } from '@angular/common/http';
-import { WatsonConversationProvider } from '../providers/watson-conversation/watson-conversation';
+import { ChatbotProvider } from '../providers/chatbot/chatbot';
 
 
 const environment = {
@@ -65,7 +65,7 @@ const environment = {
     SplashScreen,
     {provide: ErrorHandler, useClass: IonicErrorHandler},
     AuthProvider,
-    WatsonConversationProvider
+    ChatbotProvider
   ]
 })
 export class AppModule {}
