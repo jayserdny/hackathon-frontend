@@ -22,6 +22,7 @@ export class ChatPage {
   };
 
   doneLoading = false;
+  conversation_id: string = '';
 
   messages = [
     // {
@@ -83,6 +84,8 @@ export class ChatPage {
     this.chatBox = '';
 
     this.chat.initConversation().then((data: any) => {
+      console.log(data)
+      this.conversation_id = data.raw.context.conversation_id;
       data.response.map(response => {
         this.messages.push({
           date: data.date,
@@ -109,7 +112,7 @@ export class ChatPage {
         pic: this.toUser.pic,
         text: message
       };
-      this.chat.responseToBot(message).then((data: any) => {
+      this.chat.responseToBot(message, this.conversation_id).then((data: any) => {
         this.messages.push(messageData);
         this.scrollToBottom();
 

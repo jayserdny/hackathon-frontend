@@ -14,8 +14,8 @@ export class ChatbotProvider {
    
   }
 
-  public responseToBot(response: string) {
-    return this.http.get(encodeURI('https://stormy-stream-39893.herokuapp.com/api/v1/response?question=' + response.trim())).toPromise();
+  public responseToBot(response: string, id?: string) {
+    return this.http.get(encodeURI('https://stormy-stream-39893.herokuapp.com/api/v1/response?question=' + response.trim() + '&id=' + id)).toPromise();
   }
 
   public initConversation() {
