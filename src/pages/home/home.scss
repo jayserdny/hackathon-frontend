@@ -1,3 +1,27 @@
 page-home {
 
+    .scroll-content {
+        background-color: color($colors, light-bg , base);  
+    }
+
+    
+    .toolbar-background {
+        background: transparent !important;
+    }
+
+    .searchbar-md {
+        width: 100% !important;
+    }
+
+    .transparent {
+        background-color: transparent;
+        box-shadow: none !important;
+    }
+
+    .md-top {
+        margin-top: 25px !important;
+        margin-bottom: 25px !important;
+    }
+    
+
 }

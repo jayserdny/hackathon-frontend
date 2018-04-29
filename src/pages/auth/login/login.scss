@@ -1,0 +1,64 @@
+page-login {
+
+    .scroll-content {
+        background-image: url('../assets/bg.png');
+        background-repeat: no-repeat;
+        background-size: cover;
+    }
+
+   
+    .custom-btn {
+        background-color: transparent !important;
+        color: black !important;
+        text-transform: capitalize;
+        -webkit-box-shadow: none !important;
+        box-shadow: none !important;
+    }
+
+    .custom-outline {
+        border-color: white !important;
+        color: white !important;
+    }
+
+    .transparent-bg {
+        background-color: transparent !important;
+    }
+
+    .custom-btn-width {
+        width: 98% !important;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    .custom-item1-width {
+        width: 97% !important;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    .custom-item2-width {
+        width: 98% !important;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    .parent {
+        position: relative;
+    }
+
+    .child {
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
+    }
+
+    .item-input .label-md {
+        color: white !important;
+    }
+        
+    .item-input ion-input, .item-input ion-textarea {
+        color: white !important;
+    }
+    
+
+}

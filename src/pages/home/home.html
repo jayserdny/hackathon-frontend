@@ -1,18 +1,34 @@
-<ion-header>
-  <ion-navbar>
-    <button ion-button menuToggle>
-      <ion-icon name="menu"></ion-icon>
+<ion-content>
+  <button ion-button (click)="logout()">
+    Logout
+  </button>
+  <ion-header no-border>
+    <ion-navbar color="light-bg">
+      <button ion-button menuToggle>
+        <ion-icon name="menu"></ion-icon>
+      </button>
+      <ion-searchbar class="no-shadow custom-width-94" mode="ios">
+      </ion-searchbar>
+    </ion-navbar>
+  </ion-header> 
+  <ion-header no-lines no-border>
+    <ion-grid>
+        <ion-row>
+          <ion-col col-12>
+            <ion-searchbar class="no-shadow custom-width-94" placeholder="Search for hospitals"></ion-searchbar>
+          </ion-col>
+        </ion-row>
+      </ion-grid>
+  </ion-header>
+
+
+  <div #map id="map" style="height:50%"></div>
+
+  <ion-fab right bottom>
+    <button ion-fab color="dark">
+      <ion-icon name="locate"></ion-icon>
     </button>
-    <ion-title>Home</ion-title>
-  </ion-navbar>
-</ion-header>
+  </ion-fab>
 
-<ion-content padding>
-  <h3>Ionic Menu Starter</h3>
 
-  <p>
-    If you get lost, the <a href="http://ionicframework.com/docs/v2">docs</a> will show you the way.
-  </p>
-
-  <button ion-button secondary menuToggle>Toggle Menu</button>
 </ion-content>

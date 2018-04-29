@@ -1,0 +1,40 @@
+<ion-content class="parent">
+
+  <ion-grid class="v-h-center child">
+    <ion-row>
+      <ion-col col-12>
+        <ion-item class="transparent-bg custom-item2-width" no-padding>
+          <ion-label floating>Email</ion-label>
+          <ion-input [(ngModel)]="email" type="text"></ion-input>
+        </ion-item>
+      </ion-col>
+      <ion-col col-12 no-padding>
+        <ion-item class="transparent-bg custom-item1-width" no-padding>
+          <ion-label floating>Password</ion-label>
+          <ion-input [(ngModel)]="password" type="password"></ion-input>
+        </ion-item>
+      </ion-col>
+      <ion-col col-12 no-padding>
+        <ion-item class="hide-item"></ion-item>
+      </ion-col>
+
+      <ion-col col-12 no-padding>
+        <br />
+        <div text-center>
+          <button block ion-button outline (click)="login();" class="custom-outline custom-btn-width">Login</button>
+        </div>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+
+
+
+</ion-content>
+
+<ion-footer>
+  <ion-toolbar text-center transparent>
+    <button class="custom-btn" ion-button (click)="openPage('SignupPage');">
+      Does not have an account? Signup!
+    </button>
+  </ion-toolbar>
+</ion-footer>
